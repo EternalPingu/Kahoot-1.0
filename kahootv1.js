@@ -1,6 +1,8 @@
 ( async function loadTools() {
 
-    await fetch("https://raw.githubusercontent.com/Astonisthebest/Kahoot-v1/main/EventTools.js").then((response) => response.text()).then((code) => eval(code));
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/EventTools.js").then((response) => response.text()).then((code) => eval(code));
+
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Uuid.js").then((response) => response.text()).then((code) => eval(code));
 
     console.clear();
 
@@ -53,11 +55,11 @@ async function quiz(url) {
 
     });
 
-    await fetch("https://raw.githubusercontent.com/Astonisthebest/Kahoot-v1/main/Logging.js").then((response) => response.text()).then((resText) => eval(resText));
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Logging.js").then((response) => response.text()).then((resText) => eval(resText));
 
-    await fetch("https://raw.githubusercontent.com/Astonisthebest/Kahoot-v1/main/Helper.js").then((response) => response.text()).then((resText) => eval(resText));
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Helper.js").then((response) => response.text()).then((resText) => eval(resText));
 
-    await fetch("https://raw.githubusercontent.com/Astonisthebest/Kahoot-v1/main/Events.js").then((response) => response.text()).then((resText) => eval(resText));
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Events.js").then((response) => response.text()).then((resText) => eval(resText));
     
     modes = ["auto","outline","hide","del","exact","random","skill"];
 
