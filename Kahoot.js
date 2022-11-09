@@ -1,7 +1,7 @@
 ( async function loadTools() {
     answer = function(){};
     await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/EventTools.js").then((response) => response.text()).then((code) => eval(code));
-    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Uuid.js").then((response) => responst()).then((code) => eval(code));
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Uuid.js").then((response) => response.text()).then((code) => eval(code));
     await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Events.js").then((response) => response.text()).then((resText) => eval(resText));
 
 
