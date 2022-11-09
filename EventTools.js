@@ -53,20 +53,20 @@ window.addEventListener("urlchange", function() {
         })() : event == "QuestionStart" ? (() => {
             var data = {
                 Answer1 : {
-                    button : document.querySelector("[data-functional-selector]='answer-0'"),
-                    text : document.querySelector("[data-functional-selector]='question-choice-text-0'")
+                    button : document.querySelector("[data-functional-selector='answer-0']"),
+                    text : document.querySelector("[data-functional-selector='question-choice-text-0']")
                 },
                 Answer2 : {
-                    button : document.querySelector("[data-functional-selector]='answer-1'"),
-                    text : document.querySelector("[data-functional-selector]='question-choice-text-1'")
+                    button : document.querySelector("[data-functional-selector='answer-1']"),
+                    text : document.querySelector("[data-functional-selector='question-choice-text-1']")
                 },
                 Answer3 : {
-                    button : document.querySelector("[data-functional-selector]='answer-1'"),
-                    text : document.querySelector("[data-functional-selector]='question-choice-text-1'")
+                    button : document.querySelector("[data-functional-selector='answer-2']"),
+                    text : document.querySelector("[data-functional-selector='question-choice-text-2']")
                 },
                 Answer4 : {
-                    button : document.querySelector("[data-functional-selector]='answer-1'"),
-                    text : document.querySelector("[data-functional-selector]='question-choice-text-1'")
+                    button : document.querySelector("[data-functional-selector='answer-3']"),
+                    text : document.querySelector("[data-functional-selector='question-choice-text-3']")
                 }
             }
             return data;
