@@ -72,7 +72,7 @@ window.addEventListener("urlchange", function() {
             return data;
         } : false;
         window.dispatchEvent(new CustomEvent(event,{detail : details}));
-        console.log("event:" + event + "\ndata :",data);
+        console.log("event:" + event + "\ndata :",details);
 });
 
 function keyup(evt) {
