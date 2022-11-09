@@ -17,7 +17,7 @@ function getQuizUUID(name) {
  /////Now Ask User For Quiz Name////
 ///////////////////////////////////
 window.addEventListener("QuizStart",function() {
-    var name = input("Enter Quiz Name");
+    var name = prompt("Enter Quiz Name");
     function init(event) {
         var uuid = event.detail;
         quiz(uuid);
