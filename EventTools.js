@@ -50,8 +50,8 @@ window.addEventListener("urlchange", function() {
                 QuestionText : document.querySelector("[data-functional-selector]='question-block-title'").children[0].children[0]
             }
             return data
-        })() : event == "QuestionStart" ? () => {
-            var data = ({
+        })() : event == "QuestionStart" ? (() => {
+            var data = {
                 Answer1 : {
                     button : document.querySelector("[data-functional-selector]='answer-0'"),
                     text : document.querySelector("[data-functional-selector]='question-choice-text-0'")
