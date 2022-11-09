@@ -39,19 +39,19 @@ window.addEventListener("urlchange", function() {
 
         var event = sub_url == "join" ? "PinEnter" : sub_url == "instructions" ? "QuizJoin" : sub_url == "start" ? "QuizStart" : sub_url == "getready" ? "BeforeQuestion" : sub_url == "gameblock" ? "QuestionStart" : sub_url == "answer/result" ? "AfterQuestion": sub_url == "answer/sent" ? "QuestionAnswer" : 1;
 
-        var details = event == "QuizJoin" ? () => {
+        var details = event == "QuizJoin" ? (() => {
             var data = {
                 PlayerName : JSON.parse(localStorage.getItem("kahoot-game_session")).playerName,
                 QuizPin : JSON.parse(localStorage.getItem("kahoot-game_session")).pin
             }
             return data;
-        } : event == "BeforeQuestion" ? () => {
+        })() : event == "BeforeQuestion" ? (() => {
             var data = {
                 QuestionText : document.querySelector("[data-functional-selector]='question-block-title'").children[0].children[0]
             }
             return data
-        } : event == "QuestionStart" ? () => {
-            var data = {
+        })() : event == "QuestionStart" ? () => {
+            var data = ({
                 Answer1 : {
                     button : document.querySelector("[data-functional-selector]='answer-0'"),
                     text : document.querySelector("[data-functional-selector]='question-choice-text-0'")
@@ -70,7 +70,7 @@ window.addEventListener("urlchange", function() {
                 }
             }
             return data;
-        } : false;
+        })() : false;
         window.dispatchEvent(new CustomEvent(event,{detail : details}));
         console.log("event:" + event + "\ndata :",details);
 });
