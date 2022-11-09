@@ -71,7 +71,7 @@ window.addEventListener("urlchange", function() {
             }
             return data;
         } : false;
-        window.dispatchEvent(new CustomEvent(event,details));
+        window.dispatchEvent(new CustomEvent(event,{detail : details}));
         console.log("event:" + event + "\ndata :",data);
 });
 
