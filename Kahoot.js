@@ -2,11 +2,7 @@
     answer = function(){};
     await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/EventTools.js").then((response) => response.text()).then((code) => eval(code));
     await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Uuid.js").then((response) => response.text()).then((code) => eval(code));
-    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Events.js").then((response) => response.text()).then((resText) => eval(resText));
-
-
     console.clear();
-
     console.log("%c✅ Tools Loaded! ✅", "color: green; font-weight: 700; font-size: 1.25rem;");
 
 })();
