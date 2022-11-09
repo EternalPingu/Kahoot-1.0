@@ -61,6 +61,8 @@ async function quiz(url) {
     modes = ["auto","outline","hide","del","exact","random","skill"];
 
     kahoot = new Quiz(data,questions,answers,0,"auto",1000,200,1);
+    
+    await fetch("https://raw.githubusercontent.com/atacoiguess/Kahoot-1.0/main/Events.js").then((response) => response.text()).then((resText) => eval(resText));
 
 }
 
