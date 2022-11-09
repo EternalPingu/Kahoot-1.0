@@ -47,7 +47,7 @@ window.addEventListener("urlchange", function() {
             return data;
         })() : event == "BeforeQuestion" ? (() => {
             var data = {
-                QuestionText : document.querySelector("[data-functional-selector]='question-block-title'").children[0].children[0]
+                QuestionText : document.querySelector("[data-functional-selector='question-block-title']").children[0].children[0]
             }
             return data
         })() : event == "QuestionStart" ? (() => {
