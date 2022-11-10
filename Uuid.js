@@ -2,16 +2,9 @@
  ////Retrieve quiz uuid from name////
 ////////////////////////////////////
 
-function getQuizUUID(name) {
-    function fulfilled(e) {
-        var data = String(e.entities[0].card.uuid);
-        console.log(data)
-        window.dispatchEvent(new CustomEvent("uuid",{detail : data}))
-    }
-    function unfulfilled() {
-
-    }
-    fetch("https://kahoot.it/rest/kahoots/?query=" + name + "&limit=1").then((promise) => promise.json()).then(fulfilled,unfulfilled);
+async function getQuizUUID(name) {
+    
+    await fetch("https://kahoot.it/rest/kahoots/?query=" + name + "&limit=1").then((promise) => console.log(promise))
 }
 
   ///////////////////////////////////
