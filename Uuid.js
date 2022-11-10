@@ -4,7 +4,8 @@
 
 function getQuizUUID(name) {
     function fulfilled(e) {
-        var data = e.entities[0].card.uuid;
+        var data = String(e.entities[0].card.uuid);
+        console.log(data)
         window.dispatchEvent(new CustomEvent("uuid",{detail : data}))
     }
     function unfulfilled() {
