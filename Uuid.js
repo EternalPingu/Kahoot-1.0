@@ -21,6 +21,7 @@ window.addEventListener("QuizStart",function() {
     var name = prompt("Enter Quiz Name");
     function init(event) {
         var uuid = event.detail;
+        console.log(uuid)
         quiz(uuid);
     }
     window.addEventListener("uuid",init);
