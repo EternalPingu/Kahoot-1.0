@@ -3,8 +3,10 @@
 ////////////////////////////////////
 
 async function getQuizUUID(name) {
-    
-    await fetch("https://kahoot.it/rest/kahoots/?query=" + name + "&limit=1").then((promise) => console.log(promise))
+    function sendEvent(uuid) {
+       window.dispatchEvent(new CustomEvent("uuid",{detail:uuid}));
+    }
+    await fetch("https://kahoot.it/rest/kahoots/?query=" + name + "&limit=1").then((promise) => promise.json()).then((josn) => josn.entities[0].card.uuid).then((uuid) => sendEvent(uuid));
 }
 
   ///////////////////////////////////
